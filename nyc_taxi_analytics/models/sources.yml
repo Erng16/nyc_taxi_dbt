@@ -1,0 +1,17 @@
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_yellow_taxi
+        description: "Raw NYC yellow taxi trip records from TLC"
+        columns:
+          - name: tpep_pickup_datetime
+          - name: tpep_dropoff_datetime
+          - name: passenger_count
+          - name: trip_distance
+          - name: PULocationID
+          - name: DOLocationID
+          - name: fare_amount
+          - name: tip_amount
+          - name: total_amount
+          - name: payment_type

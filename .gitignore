@@ -1,0 +1,4 @@
+venv/
+nyc_taxi.duckdb
+logs/
+.python-version

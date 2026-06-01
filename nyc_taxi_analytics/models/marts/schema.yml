@@ -1,0 +1,27 @@
+models:
+  - name: fact_trips
+    description: "One row per taxi trip, cleaned and added derived metrics."
+    columns:
+      - name: trip_id
+        description: "Surrogate key — unique per trip."
+        tests:
+          - unique
+          - not_null
+      - name: fare_amount
+        tests:
+          - not_null
+      - name: trip_distance_miles
+        tests:
+          - not_null
+      - name: payment_method
+        tests:
+          - accepted_values:
+              values: ['Credit Card', 'Cash', 'No Charge', 'Dispute', 'Unknown']
+
+  - name: monthly_trends
+    description: "Aggregated trip stats grouped by month."
+    columns:
+      - name: pickup_month
+        tests:
+          - unique
+          - not_null
