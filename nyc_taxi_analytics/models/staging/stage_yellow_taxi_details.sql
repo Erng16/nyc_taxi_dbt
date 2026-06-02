@@ -42,7 +42,7 @@ cleaned as (
     from source
     where tpep_pickup_datetime is not null
     and tpep_dropoff_datetime is not null
-    and tpep_pickup_datetime between '2024-01-01' and '2024-03-31'
+    and tpep_pickup_datetime >= '2024-01-01' and tpep_pickup_datetime < '2024-04-01'
     and tpep_dropoff_datetime > tpep_pickup_datetime
     and fare_amount > 0
     and trip_distance > 0
